@@ -301,10 +301,10 @@ def main():
                 st.divider()
 
                 # Allergies / Avoid List
-                st.subheader("⚠️ Allergies / Ingredients to Avoid")
+                st.subheader("⚠️ Allergens/Ingredients to Avoid")
 
                 allergies_preset = st.multiselect(
-                    "Select common allergens",
+                    "Select allergens or ingredients to avoid",
                     options=[
                         "Fragrance",
                         "Essential Oils",
@@ -316,13 +316,14 @@ def main():
                         "Fungal Acne Triggers",
                         "Benzoyl Peroxide",
                         "Retinoids"
-                    ]
+                    ],
+                    help="Can be true allergies, sensitivities, or preferences (e.g., fragrance-free)"
                 )
 
                 allergies_custom = st.text_area(
-                    "Custom allergies (one per line)",
+                    "Custom allergens/ingredients to avoid (one per line)",
                     placeholder="Niacinamide\nVitamin C\nLactic Acid",
-                    help="Add specific ingredients you want to avoid"
+                    help="Add specific allergens or ingredients you want to avoid"
                 )
 
                 st.divider()
@@ -398,7 +399,7 @@ def main():
             st.write(f"📚 {profile.get('expertise_level', 'beginner').title()} level")
 
             if profile.get('allergies'):
-                st.write(f"⚠️ {len(profile['allergies'])} allergen(s) tracked")
+                st.write(f"⚠️ {len(profile['allergies'])} allergen(s)/ingredients to avoid")
 
             if st.button("✏️ Edit Profile", use_container_width=True):
                 st.session_state.profile_submitted = False

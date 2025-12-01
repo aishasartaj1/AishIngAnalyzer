@@ -149,7 +149,7 @@ USER PROFILE:
 - Name: {user_name}
 - Skin Type: {skin_type}
 - Expertise Level: {expertise_level}
-- Allergies: {', '.join(allergies) if allergies else 'None'}
+- Allergens/Ingredients to Avoid: {', '.join(allergies) if allergies else 'None'}
 
 INGREDIENTS TO ANALYZE:
 {ingredient_summary}
@@ -161,8 +161,10 @@ INSTRUCTIONS:
    - Safety rating (1-10 scale, where 1=safest, 10=most concerning)
    - Key concerns or benefits
    - Specific recommendation (SAFE, USE WITH CAUTION, AVOID)
-3. Cross-reference ALL ingredients with user allergies: {', '.join(allergies) if allergies else 'none'}
-4. If any ingredient matches an allergen, mark it with "⚠️ ALLERGEN MATCH" and recommend AVOID
+3. Cross-reference ALL ingredients with user's allergen/avoidance list: {', '.join(allergies) if allergies else 'none'}
+4. If any ingredient matches the user's list, mark it with "⚠️ ALLERGEN/INGREDIENT TO AVOID" and recommend AVOID
+   - IMPORTANT: Use the term "Allergen/Ingredient to Avoid" - this covers both true allergies and preference-based avoidance
+   - Reason: Some users have true allergies, others just prefer to avoid certain ingredients (e.g., alcohol-free or fragrance-free preference)
 5. Adapt recommendations based on skin type ({skin_type})
 6. Provide an overall verdict (SAFE TO USE / USE WITH CAUTION / AVOID)
 7. Keep the analysis concise and actionable
@@ -172,8 +174,8 @@ Use clear sections:
 ## Ingredient Analysis
 [Analyze each ingredient]
 
-## Allergen Check
-[List any allergen matches]
+## Allergen/Ingredient Check
+[List any ingredients that match user's allergen/avoidance list]
 
 ## Overall Verdict
 [Safe to use / Use with caution / Avoid - with brief reasoning]
