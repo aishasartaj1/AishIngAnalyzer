@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://www.ewg.org/skindeep/ingredients/701385-CITRIC_ACID/",
+    "error": "HTTPSConnectionPool(host='www.ewg.org', port=443): Read timed out. (read timeout=10)",
+    "timestamp": "2025-11-30 01:21:14"
+  },
+  {
+    "url": "https://www.ewg.org/skindeep/ingredients/701385-CITRIC_ACID/",
+    "error": "HTTPSConnectionPool(host='www.ewg.org', port=443): Read timed out. (read timeout=10)",
+    "timestamp": "2025-11-30 01:21:26"
+  }
+]

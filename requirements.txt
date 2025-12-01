@@ -1,0 +1,47 @@
+# Core
+python-dotenv==1.0.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==5.1.0
+
+# Scraping (advanced)
+selenium==4.16.0
+webdriver-manager==4.0.1
+
+# Data processing
+pandas==2.1.4
+numpy==1.26.2
+
+# Embeddings & Vector DB
+sentence-transformers==2.2.2
+qdrant-client==1.7.3
+
+# LangChain/LangGraph
+langchain==0.1.0
+langgraph==0.0.28
+langchain-google-genai==0.0.6
+langchain-community==0.0.13
+google-generativeai==0.3.2
+
+# Tools
+tavily-python==0.3.3
+
+# Memory
+redis==5.0.1
+
+# Observability
+langsmith==0.0.77
+
+# Evaluation
+ragas==0.1.1
+datasets==2.16.1
+
+# UI
+streamlit==1.29.0
+Pillow==10.1.0
+pytesseract==0.3.10
+reportlab==4.0.7
+
+# Utilities
+tqdm==4.66.1
+tenacity==8.2.3

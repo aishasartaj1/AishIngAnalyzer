@@ -1,0 +1,773 @@
+[
+  {
+    "name": "Triolein",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Acetyl Glucosamine",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Salicylic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Centella Asiatica Extract",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Oleic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Tocopherol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "2-Amino-5-Nitrophenol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "2-Amino-6-Chloro-4-Nitrophenol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "1,4-Dioxane",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Azelaic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Menthyl Lactate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Vitis Vinifera Seed Extract",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Ascorbyl Glucoside",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Methoxyphenylimino Dimethylcyclohexenyl Ethyl Glycinate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Copper Palmitoyl Heptapeptide-14",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Hyaluronic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Ceramide EOP",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Phytosteryl Sunflowerseedate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Argania Spinosa Kernel Oil",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "2-Amino-4-Nitrophenol Sulfate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Gluconolactone",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Acetyl Hexapeptide-8",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Cetyl Lactate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Camellia Sinensis Leaf Extract",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Sodium Ascorbyl Phosphate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Citric Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Retinol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Lactococcus Ferment Lysate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Ectoin",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Glycolic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Menthone Glycerin Acetal",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Simmondsia Chinensis Seed Oil",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Opuntia Ficus-Indica Extract",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Maleated Soybean Oil Glyceryl/​Octyldodecanol Esters",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Sodium Hyaluronate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "New on INCIDecoder",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "1-Naphthol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Hydrolyzed Hyaluronic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Linoleic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Tetrapeptide-21",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Ascorbic Acid",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Castor Oil/​IPDI Copolymer",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Panthenol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "2-Amino-4-Hydroxyethylaminoanisole Sulfate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Tetrahexyldecyl Ascorbate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Unknown",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "DATA SOURCES",
+      "CONCERNS",
+      "Environment Canada",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "sources": [
+      "ewg"
+    ]
+  },
+  {
+    "name": "Alcohol Denat.",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Sodium Acrylates Crosspolymer-2",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Butylene Glycol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "2-Amino-3-Nitrophenol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "2-Amino-4-Hydroxyethylaminoanisole",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "1,2-Hexanediol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Hydrogenated Vegetable Glycerides",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Tretinoin",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "2-Amino-4-Nitrophenol",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "cosmeticsinfo"
+    ]
+  },
+  {
+    "name": "Dilinoleic Acid/​Propanediol Copolymer",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Glycerin",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Hydroxypinacolone Retinoate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Palmitoyl Tripeptide-1",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Palmitoyl Tetrapeptide-7",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Rosa Rubiginosa Seed Oil",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Retinyl Palmitate",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Beta-Glucan",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  },
+  {
+    "name": "Hydroxypropyl Cyclodextrin",
+    "purpose": "",
+    "description": "",
+    "safety_score": null,
+    "concerns": [
+      "none"
+    ],
+    "sources": [
+      "incidecoder"
+    ]
+  }
+]

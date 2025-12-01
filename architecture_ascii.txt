@@ -1,0 +1,239 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                      AISHINGANALYZER SYSTEM ARCHITECTURE                      ║
+║                 Multi-Agent Cosmetic Ingredient Safety Analyzer               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                        LAYER 1: USER INTERFACE (Streamlit)                    │
+│                                                                               │
+│   Input:  • User Profile (name, skin type, allergies, expertise level)       │
+│           • Ingredient List (paste from product label or type manually)      │
+│                                                                               │
+│   Output: • Safety Analysis Table (ingredient, purpose, score, warnings)     │
+│           • Personalized Recommendations (use/avoid with reasoning)          │
+│           • Export Options (PDF, CSV)                                        │
+└───────────────────────────────┬───────────────────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                 LAYER 2: SUPERVISOR AGENT (Gemini 2.0 Flash)                  │
+│                           Strategic Workflow Orchestrator                     │
+│                                                                               │
+│   Core Intelligence:                                                          │
+│   ┌─────────────────────────────────────────────────────────────────────┐    │
+│   │ • Analyzes current workflow state (what's done, what's missing)     │    │
+│   │ • Routes to next appropriate agent based on state conditions        │    │
+│   │ • Manages retry logic (max 2 attempts per agent)                    │    │
+│   │ • Tracks attempt counts and escalates if needed                     │    │
+│   │ • Detects workflow completion (all validations passed)              │    │
+│   └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│   Routing Decision Logic:                                                     │
+│   ┌──────────────────────────┬─────────────────┬──────────────────────────┐  │
+│   │ State Condition          │ Next Agent      │ Reasoning                │  │
+│   ├──────────────────────────┼─────────────────┼──────────────────────────┤  │
+│   │ missing_ingredients      │ → Research      │ Need ingredient data     │  │
+│   │ data_complete + no_analysis │ → Analysis   │ Generate safety report   │  │
+│   │ analysis_exists + not_validated │ → Critic │ Quality check needed     │  │
+│   │ critic_approved          │ → END           │ Return to user           │  │
+│   │ critic_rejected          │ → Analysis (retry) │ Improve with feedback│  │
+│   │ max_retries_exceeded     │ → END (partial) │ Return best effort       │  │
+│   └──────────────────────────┴─────────────────┴──────────────────────────┘  │
+└───────┬───────────────────────────────┬───────────────────────────────┬───────┘
+        │                               │                               │
+        ▼                               ▼                               ▼
+┌───────────────────┐         ┌─────────────────────┐         ┌─────────────────┐
+│  RESEARCH AGENT   │         │   ANALYSIS AGENT    │         │   CRITIC AGENT  │
+│  (Gemini 2.0)     │         │   (Gemini 2.0)      │         │   (Gemini 2.0)  │
+├───────────────────┤         ├─────────────────────┤         ├─────────────────┤
+│                   │         │                     │         │                 │
+│ Role: Intelligent │         │ Role: Personalized  │         │ Role: Quality   │
+│ Data Gatherer     │         │ Safety Analyst      │         │ Validator       │
+│                   │         │                     │         │                 │
+│ Intelligence:     │         │ Intelligence:       │         │ Intelligence:   │
+│ • Classify        │         │ • Adapt detail by   │         │ • Multi-gate    │
+│   ingredient type │         │   user expertise    │         │   validation    │
+│ • Select tools    │         │ • Cross-reference   │         │ • Reject/Approve│
+│   dynamically     │         │   with allergies    │         │   authority     │
+│ • Score confidence│         │ • Generate warnings │         │ • Force retries │
+│ • Trigger fallback│         │ • Self-validate     │         │ • Track attempts│
+│   if conf < 0.7   │         │   completeness      │         │                 │
+│                   │         │                     │         │                 │
+│ Tool Strategy:    │         │ Adaptive Behavior:  │         │ Validation:     │
+│ • Common name     │         │ • Beginner → simple │         │ ✓ Completeness  │
+│   → Qdrant only   │         │ • Expert → technical│         │ ✓ Allergen match│
+│ • Scientific      │         │ • High-risk → bold  │         │ ✓ Consistency   │
+│   → Qdrant +      │         │ • Allergies → AVOID │         │ ✓ Tone correct  │
+│     fallback      │         │   tags prominent    │         │                 │
+│ • Brand/Unknown   │         │                     │         │ Decision:       │
+│   → Tavily web    │         │                     │         │ • APPROVE → END │
+│                   │         │                     │         │ • REJECT → RETRY│
+└─────────┬─────────┘         └──────────┬──────────┘         └────────┬────────┘
+          │                              │                             │
+          └──────────────────────────────┼─────────────────────────────┘
+                                         │
+                                         ▼
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                      LAYER 3: TOOL LAYER (FastMCP Server)                     │
+│                                                                               │
+│   Custom Tools (Built with FastMCP):                                         │
+│   ┌─────────────────────────────────────────────────────────────────────┐    │
+│   │ 1. ingredient_lookup(name: str) → dict                              │    │
+│   │    • Queries Qdrant vector database                                 │    │
+│   │    • Returns: name, purpose, safety_score, concerns, confidence     │    │
+│   │    • Uses semantic search with cosine similarity                    │    │
+│   │                                                                      │    │
+│   │ 2. safety_scorer(ingredient_data: dict) → float                     │    │
+│   │    • Calculates personalized safety score (1-10)                    │    │
+│   │    • Factors: base score, user allergies, skin type compatibility   │    │
+│   │    • Returns adjusted score with reasoning                          │    │
+│   │                                                                      │    │
+│   │ 3. allergen_matcher(ingredient: str, user_allergies: list) → bool   │    │
+│   │    • Cross-references ingredient with user allergy list             │    │
+│   │    • Handles synonyms and chemical name variations                  │    │
+│   │    • Returns match flag with specific allergen identified           │    │
+│   └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│   Built-in Tools:                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐    │
+│   │ • tavily_search(query: str) → list                                  │    │
+│   │   - Web search for ingredients not in database                      │    │
+│   │   - Fallback when Qdrant confidence < 0.7                           │    │
+│   │   - Returns web results with safety information                     │    │
+│   └─────────────────────────────────────────────────────────────────────┘    │
+└───────────────────────────────┬───────────────────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────────────────┐
+│              LAYER 4: CONTEXT & MEMORY LAYER (Redis + LangGraph)              │
+│                                                                               │
+│   ┌─────────────────────────────────┐   ┌─────────────────────────────────┐ │
+│   │   SessionService (Redis Cloud)  │   │   Conversation Memory           │ │
+│   ├─────────────────────────────────┤   ├─────────────────────────────────┤ │
+│   │                                 │   │                                 │ │
+│   │ User Profile Storage:           │   │ LangGraph State:                │ │
+│   │ • Name                          │   │ • Chat history                  │ │
+│   │ • Skin type (normal/sensitive/  │   │ • Past ingredient queries       │ │
+│   │   oily/dry/combination)         │   │ • User preferences              │ │
+│   │ • Allergies list                │   │ • Session context               │ │
+│   │ • Expertise level (beginner/    │   │ • Intermediate analysis states  │ │
+│   │   intermediate/expert)          │   │ • Agent decision logs           │ │
+│   │ • Past analysis history         │   │                                 │ │
+│   │                                 │   │ Enables:                        │ │
+│   │ Enables:                        │   │ • Multi-turn conversations      │ │
+│   │ • Personalized analysis         │   │ • Context-aware responses       │ │
+│   │ • Consistent user experience    │   │ • Follow-up questions           │ │
+│   │ • Cross-session memory          │   │ • Refined analysis requests     │ │
+│   └─────────────────────────────────┘   └─────────────────────────────────┘ │
+└───────────────────────────────┬───────────────────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                  LAYER 5: DATA LAYER (Qdrant Vector Database)                 │
+│                                                                               │
+│   Database Specifications:                                                    │
+│   • Provider: Qdrant Cloud (Free Tier)                                       │
+│   • Collection: "cosmetic_ingredients"                                       │
+│   • Vector Dimensions: 384 (sentence-transformers/all-MiniLM-L6-v2)          │
+│   • Total Ingredients: 400+ (expandable)                                     │
+│   • Search Method: Cosine Similarity                                         │
+│                                                                               │
+│   Metadata Schema:                                                            │
+│   ┌─────────────────────────────────────────────────────────────────────┐    │
+│   │ {                                                                   │    │
+│   │   "name": "Niacinamide",              // Common ingredient name     │    │
+│   │   "purpose": "Skin brightening, anti-inflammatory, pore reduction", │    │
+│   │   "safety_score": 1,                  // 1 (safest) to 10 (risky)  │    │
+│   │   "concerns": ["none"],               // Known safety concerns      │    │
+│   │   "description": "Vitamin B3 derivative that improves skin tone...",│    │
+│   │   "sources": ["incidecoder.com", "ewg.org"],                        │    │
+│   │   "vector": [0.023, -0.145, ...]     // 384-dim embedding           │    │
+│   │ }                                                                   │    │
+│   └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│   Data Sources (Day 1 Scraped):                                              │
+│   • incidecoder.com      (ingredient purposes & descriptions)                │
+│   • cosmeticsinfo.org    (safety information & usage)                        │
+│   • ewg.org/skindeep     (safety scores 1-10)                                │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                    OBSERVABILITY LAYER (LangSmith Tracing)                    │
+│                                                                               │
+│   Traces Every:                                                               │
+│   • Supervisor routing decisions                                             │
+│   • Agent tool selections                                                     │
+│   • LLM prompts and responses                                                │
+│   • Tool execution results                                                    │
+│   • Validation failures and retries                                          │
+│   • End-to-end workflow latency                                              │
+│                                                                               │
+│   Enables:                                                                    │
+│   • Debugging agent decisions                                                │
+│   • Performance optimization                                                 │
+│   • Quality monitoring                                                        │
+│   • Cost tracking per analysis                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                             WORKFLOW EXAMPLE                                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+User Input: "Water, Niacinamide, Parfum"
+User Profile: Sensitive skin, allergic to Fragrance
+
+Step 1: Supervisor → Research Agent (missing ingredient data)
+Step 2: Research Agent analyzes each ingredient:
+        • Water → Qdrant → {safety: 1, conf: 1.0}
+        • Niacinamide → Qdrant → {safety: 1, conf: 0.95}
+        • Parfum → Qdrant + Tavily → {safety: 7, conf: 0.85}
+Step 3: Supervisor → Analysis Agent (data complete, no analysis)
+Step 4: Analysis Agent generates personalized report:
+        • Detects Parfum matches user allergy "Fragrance"
+        • Adapts tone for sensitive skin type
+        • Generates WARNING for high-risk ingredient
+Step 5: Supervisor → Critic Agent (analysis exists, needs validation)
+Step 6: Critic Agent validates:
+        ✓ All 3 ingredients addressed
+        ✓ Parfum allergen flagged prominently
+        ✓ Safety score 7 matches "high concern" description
+        ✓ Beginner-friendly language used
+        → APPROVED
+Step 7: Supervisor → END (return to user)
+Step 8: User sees: "⚠️ DO NOT USE - Contains Parfum (allergen match)"
+
+Total Time: ~8 seconds | Agent Calls: 4 | Tool Calls: 5 | Cost: $0.02
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                          TECHNOLOGY STACK SUMMARY                             ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║ Component         │ Technology        │ Purpose              │ Cost          ║
+║───────────────────┼───────────────────┼──────────────────────┼───────────────║
+║ Orchestration     │ LangGraph         │ Multi-agent workflow │ Free          ║
+║ LLM               │ Gemini 2.0 Flash  │ All 4 agents         │ Free tier     ║
+║ Vector DB         │ Qdrant Cloud      │ Ingredient vectors   │ Free tier     ║
+║ Web Search        │ Tavily API        │ Fallback search      │ Free tier     ║
+║ Tools             │ FastMCP           │ Custom tools         │ Free          ║
+║ Memory            │ Redis Cloud       │ User sessions        │ Free tier     ║
+║ Tracing           │ LangSmith         │ Observability        │ Free tier     ║
+║ Evaluation        │ Ragas             │ Quality metrics      │ Free          ║
+║ UI                │ Streamlit         │ User interface       │ Free          ║
+║ Deployment        │ Streamlit Cloud   │ Public hosting       │ Free          ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║ TOTAL COST: $0 Development | ~$0.02 Production per Analysis                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                       ARCHITECTURE BENEFITS & FEATURES                        ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║ ✓ True Agentic Behavior    - Agents make autonomous decisions, not pipelines ║
+║ ✓ Self-Correction          - Critic validates and forces retries if needed   ║
+║ ✓ Dynamic Tool Selection   - Research agent chooses tools based on context   ║
+║ ✓ Personalization          - Analysis adapts to user profile automatically   ║
+║ ✓ Quality Guarantees       - Multi-gate validation ensures completeness      ║
+║ ✓ Production-Ready         - Error handling, retry logic, observability      ║
+║ ✓ Cost-Efficient           - Single LLM with strategic prompting             ║
+║ ✓ Scalable                 - 1,500+ analyses/day on free tier                ║
+║ ✓ Observable               - Full LangSmith tracing for debugging            ║
+║ ✓ Extensible               - Easy to add new agents, tools, or data sources  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝

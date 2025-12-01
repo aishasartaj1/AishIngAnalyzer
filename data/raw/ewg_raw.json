@@ -1,0 +1,792 @@
+[
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/703073-HYDROXYPROPYL_CYCLODEXTRIN/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "European Chemicals Agency (ECHA)",
+      "Evaluation of vitamin A toxicity(1990-08-01)",
+      "Talk Paper: Vitamin A and Birth Defects(1995-01-01)",
+      "Characterization of esterase and alcohol dehydrogenase activity in skin Metabolism of retinyl palmitate to retinol (vitamin A) during percutaneous absorption.(1994-08-01)",
+      "Unoccluded retinol penetrates human skin in vivo more effectively than unoccluded retinyl palmitate or retinoic acid(1997-09-01)",
+      "Photodecomposition of retinyl palmitate in ethanol by UVA light-formation of photodecomposition products, reactive oxygen species, and lipid peroxides(2005-02-01)",
+      "UVA photoirradiation of retinyl palmitate--formation of singlet oxygen and superoxide, and their role in induction of lipid peroxidation(2006-05-05)",
+      "Photomutagenicity of retinyl palmitate by ultraviolet a irradiation in mouse lymphoma cells(2005-11-01)",
+      "Photo-induced DNA damage and photocytotoxicity of retinyl palmitate and its photodecomposition products(2005-09-01)",
+      "NTP Draft Technical Report on the Photococarcinogenesis Study of Retinoic Acid and Retinyl Palmitate [CAS Nos 302-79-4 (All-Trans-Retinoic Acid) and 79-81-2 (All-Trans-Retinyl Palmitate)] in SKH-1 Mice (Simulated Solar Light And Topical Application Study)(2010-01-01)",
+      "Vitamin A: Intake via cosmetic products should be restricted(2014-01-01)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/5684334-HYDROXYPINACOLONE_RETINOATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Characterization of esterase and alcohol dehydrogenase activity in skin Metabolism of retinyl palmitate to retinol (vitamin A) during percutaneous absorption.(1994-08-01)",
+      "Unoccluded retinol penetrates human skin in vivo more effectively than unoccluded retinyl palmitate or retinoic acid(1997-09-01)",
+      "Environment Canada",
+      "Photodecomposition of retinyl palmitate in ethanol by UVA light-formation of photodecomposition products, reactive oxygen species, and lipid peroxides(2005-02-01)",
+      "UVA photoirradiation of retinyl palmitate--formation of singlet oxygen and superoxide, and their role in induction of lipid peroxidation(2006-05-05)",
+      "Photomutagenicity of retinyl palmitate by ultraviolet a irradiation in mouse lymphoma cells(2005-11-01)",
+      "Photo-induced DNA damage and photocytotoxicity of retinyl palmitate and its photodecomposition products(2005-09-01)",
+      "NTP Draft Technical Report on the Photococarcinogenesis Study of Retinoic Acid and Retinyl Palmitate [CAS Nos 302-79-4 (All-Trans-Retinoic Acid) and 79-81-2 (All-Trans-Retinyl Palmitate)] in SKH-1 Mice (Simulated Solar Light And Topical Application Study)(2010-01-01)",
+      "California OEHHA (Office of Environmental Health Hazard Assessment)",
+      "Evaluation of vitamin A toxicity(1990-08-01)",
+      "Talk Paper: Vitamin A and Birth Defects(1995-01-01)",
+      "Health Canada",
+      "EU Cosmetics Directive",
+      "Vitamin A: Intake via cosmetic products should be restricted(2014-01-01)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/705541-RETINOIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701276-CETYL_PALMITATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada",
+      "US. Food and Drug Administration (FDA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/704436-PANTHENOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/723599-Sodium_Acrylates_Crosspolymer2/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Health Canada",
+      "Environment Canada",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/702620-GLYCERIN/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/720174-LACTOCOCCUS_FERMENT_LYSATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/861874-HYDROLYZED_HYALURONIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/707093-VITIS_VINIFERA_GRAPE_SEED_EXTRACT/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/706498-TETRAHEXYLDECYL_ASCORBATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/861818-TETRAPEPTIDE21/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 3,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "EU Cosmetics Directive",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/719780-HYDROXYETHYL34METHYLENEDIOXYANILINE_HCL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700552-ASCORBYL_GLUCOSIDE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Effect of some penetration enhancers on the permeation of glibenclamide and glipizide through mouse skin(2003-12-01)",
+      "A single oral dose of ethanol can alter transdermal absorption of topically applied chemicals in rats(2006-08-01)",
+      "EU GHS Hazard Labeling Codes",
+      "US. Food and Drug Administration (FDA)",
+      "Environment Canada",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700215-ALCOHOL_DENATURED/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/862426-DISODIUM_ACETYL_GLUCOSAMINE_PHOSPHATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/705984-SODIUM_ASCORBYL_PHOSPHATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)",
+      "The inductive effects of Centella asiatica on rat spermatogenic cell apoptosis in vivo(2012-04-01)",
+      "Antispermatogenic and antifertility effect of Pegaga (Centella asiatica L) on the testis of male Sprague-Dawley rats(2010-01-01)",
+      "Safety Assessment of Centella asiatica-derived Ingredients as Used in Cosmetics(2015-07-10)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701197-CENTELLA_ASIATICA_GOTU_KOLA_EXTRACT/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/1593422-MALEATED_SOYBEAN_OIL_GLYCERYLOCTYLDODECANOL_ESTERS/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Initiation of a transplantable fibrosarcoma by the synergism of two non-initiators, alpha-tocopherol and soya oil(1985-01-01)",
+      "Induction of transplantable tumors by repeated subcutaneous injections of natural and synthetic vitamin E in mice and rats(1991-01-01)",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)",
+      "US. Food and Drug Administration (FDA)",
+      "Environment Canada",
+      "National Toxicology Program (NTP)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/706564-TOCOPHEROL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701160-CASTOR_OIL_IPDI_COPOLYMER/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700187-ADIPIC_ACID_NEOPENTYL_GLYCOL_TRIMELLITIC_ANHYDRIDE_COPOLYMER/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "Peer Reviewed Literature",
+      "EU Cosmetics Directive",
+      "Environment Canada",
+      "Organohalogen Pollutants and Human Health(2017-01-01)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700018-2AMINO6CHLORO4NITROPHENOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/705966-SIMMONDSIA_CHINENSIS_JOJOBA_SEED_OIL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/719653-HYDROGENATED_VEGETABLE_GLYCERIDES/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 1,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700001-12HEXANEDIOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/706071-SODIUM_HYALURONATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/724687-TRIOLEIN/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 1,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/721299-PALMITOYL_TRIPEPTIDE1/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Protective Effect of Argan and Olive Oils against LPS-Induced Oxidative Stress and Inflammation in Mice Livers(2017-10-01)",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700501-ARGANIA_SPINOSA_ARGAN_KERNEL_OIL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Health Canada",
+      "Environmental Protection Agency (EPA)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700603-AZELAIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "Peer Reviewed Literature",
+      "EU Cosmetics Directive",
+      "Environment Canada",
+      "Organohalogen Pollutants and Human Health(2017-01-01)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700018-2AMINO6CHLORO4NITROPHENOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700861-BUTYLENE_GLYCOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "Peer Reviewed Literature",
+      "EU Cosmetics Directive",
+      "Environment Canada",
+      "Organohalogen Pollutants and Human Health(2017-01-01)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700018-2AMINO6CHLORO4NITROPHENOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "International Fragrance Association (IFRA)",
+      "Cosmetic Ingredient Review (CIR)",
+      "US. Food and Drug Administration (FDA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701026-CAMELLIA_SINENSIS_GREEN_TEA_LEAF_EXTRACT/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 1,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "EU GHS Hazard Labeling Codes",
+      "Environment Canada",
+      "Peer Reviewed Literature",
+      "Health Canada",
+      "Cosmetic Ingredient Review (CIR)",
+      "EU Cosmetics Directive",
+      "Personal Care Products Council",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700010-1NAPHTHOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "Peer Reviewed Literature",
+      "EU Cosmetics Directive",
+      "Environment Canada",
+      "Organohalogen Pollutants and Human Health(2017-01-01)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700018-2AMINO6CHLORO4NITROPHENOL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada",
+      "European Chemicals Agency (ECHA)",
+      "Environmental Protection Agency (EPA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/704272-OLEIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/706013-SODIUM_CARBOXYMETHYL_BETAGLUCAN/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Health Canada",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701385-CITRIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "EU Cosmetics Directive",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700016-2AMINO4HYDROXYETHYLAMINOANISOLE_SULFATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/702790-HDI_TRIMETHYLOL_HEXYLLACTONE_CROSSPOLYMER/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "EU GHS Hazard Labeling Codes",
+      "US. Food and Drug Administration (FDA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/703860-MENTHONE_GLYCERIN_ACETAL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/723333-ROSA_RUBIGINOSA_SEED_OIL/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 2,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "EU Cosmetics Directive",
+      "Personal Care Products Council",
+      "International Agency for Research on Cancer (IARC)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/700016-2AMINO4HYDROXYETHYLAMINOANISOLE_SULFATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Opinion concerning salicylic acid adopted by the SCCNFP during the 20th plenary meeting of 4 June 2002(2002-06-04)",
+      "Cosmetic Ingredient Review (CIR)",
+      "Peer Reviewed Literature",
+      "Technical Report on the Photocarcinogenesis of Glycolic Acid and Salicylic Acid (CAS NOS 79-14-1 and 69-72-7) in SKH-1 Mice(2007-01-01)",
+      "Environmental Protection Agency (EPA)",
+      "Danish centre on endocrine disruptors: List of Endocrine Disrupting Chemicals(2018-09-01)",
+      "US. Food and Drug Administration (FDA)",
+      "Health Canada",
+      "EU Cosmetics Directive",
+      "Japan Ministry of Health",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/705746-SALICYLIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Environment Canada",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/703578-LINOLEIC_ACID/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "US. Food and Drug Administration (FDA)",
+      "Environment Canada",
+      "Environmental Protection Agency (EPA)",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)",
+      "Peer Reviewed Literature"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/702593-GLUCONOLACTONE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 7,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/726303-PALMITOYL_TETRAPEPTIDE7/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/730377-OPUNTIA_FICUSINDICA_STEM_EXTRACT/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/862460-DILINOLEIC_ACIDPROPANEDIOL_COPOLYMER/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/730133-PHYTOSTERYL_SUNFLOWERSEEDATE/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": 8,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Peer Reviewed Literature",
+      "Cosmetic Ingredient Review (CIR)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/726608-ACETYL_HEXAPEPTIDE8/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "European Chemicals Agency (ECHA)"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/701202-CERAMIDE_EOP/"
+  },
+  {
+    "name": "Unknown",
+    "safety_score": null,
+    "description": "Enter the ingredients in EWG’s Build Your Own Report tool to get an approximate score for that product.",
+    "concerns": [
+      "CONCERNS",
+      "DATA SOURCES",
+      "Cosmetic Ingredient Review (CIR)",
+      "Environment Canada"
+    ],
+    "source": "ewg",
+    "url": "https://www.ewg.org/skindeep/ingredients/702887-HYALURONIC_ACID/"
+  }
+]
