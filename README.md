@@ -37,15 +37,15 @@ From 20 minutes of manual research to 10 seconds of validated, personalized anal
 
 ### Demo
 
-🎥 **[Watch 3-Minute Demo Video](https://your-demo-link.com)**  
+🎥 **[Watch Demo Video](chatgpt.com/?model=text-davinci-002-render-sha)**  
 🌐 **[Try Live Application](https://aishinganalyzer.streamlit.app)**  
-📊 **[View LangSmith Traces](https://smith.langchain.com/your-project)**
+📊 **[View LangSmith Traces]([https://smith.langchain.com/your-project](https://smith.langchain.com/o/1f0072d7-9e78-577a-8030-3cfc7e84f912?paginationModel=%7B%22pageIndex%22%3A0%2C%22pageSize%22%3A5%7D))**
 
 ### Quick Stats
 
-- **Analysis Time:** <10 seconds
+- **Analysis Time:** 10-20 seconds
 - **Accuracy:** >95% (based on evaluation metrics)
-- **Dataset:** 400+ ingredients with embeddings
+- **Dataset:** 64 ingredients with embeddings
 - **Cost:** $0 development | ~$0.02 per analysis in production
 - **Agents:** 4 specialized Gemini-powered agents
 - **Concepts Demonstrated:** 6 (exceeds 3 minimum requirement)
