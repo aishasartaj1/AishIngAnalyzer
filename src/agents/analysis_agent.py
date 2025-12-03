@@ -156,23 +156,28 @@ INGREDIENTS TO ANALYZE:
 
 INSTRUCTIONS:
 1. {tone_instruction}
-2. For each ingredient, provide:
-   - Name and purpose
-   - Safety rating (1-10 scale, where 1=safest, 10=most concerning)
-   - Key concerns or benefits
-   - Specific recommendation (SAFE, USE WITH CAUTION, AVOID)
+2. For EVERY SINGLE ingredient, you MUST provide ALL of the following in a TABLE format:
+   - **Ingredient:** [Ingredient Name]
+   - **Purpose:** [What this ingredient does - moisturizer, preservative, etc.]
+   - **Safety Rating:** [1-10 scale, where 1=safest, 10=most concerning]
+   - **Concerns:** [Specific safety concerns or "None known" if safe]
+   - **Recommendation:** [SAFE / USE WITH CAUTION / AVOID]
 3. Cross-reference ALL ingredients with user's allergen/avoidance list: {', '.join(allergies) if allergies else 'none'}
-4. If any ingredient matches the user's list, mark it with "⚠️ ALLERGEN/INGREDIENT TO AVOID" and recommend AVOID
+4. If any ingredient matches the user's list, mark it with "⚠️ ALLERGEN/INGREDIENT TO AVOID" in the Ingredient column and recommend AVOID
    - IMPORTANT: Use the term "Allergen/Ingredient to Avoid" - this covers both true allergies and preference-based avoidance
    - Reason: Some users have true allergies, others just prefer to avoid certain ingredients (e.g., alcohol-free or fragrance-free preference)
 5. Adapt recommendations based on skin type ({skin_type})
 6. Provide an overall verdict (SAFE TO USE / USE WITH CAUTION / AVOID)
 7. Keep the analysis concise and actionable
 
-FORMAT:
-Use clear sections:
+FORMAT EXAMPLE (FOLLOW THIS EXACTLY):
 ## Ingredient Analysis
-[Analyze each ingredient]
+
+| Ingredient | Purpose | Safety Rating | Concerns | Recommendation |
+|------------|---------|---------------|----------|----------------|
+| Aqua (Water) | Solvent and base ingredient | 1 | None known | SAFE |
+| Glycolic Acid | Chemical exfoliant (AHA) | 4 | Can cause irritation, sun sensitivity | USE WITH CAUTION |
+| Fragrance ⚠️ ALLERGEN/INGREDIENT TO AVOID | Adds scent to product | 7 | Potential allergen, irritation | AVOID |
 
 ## Allergen/Ingredient Check
 [List any ingredients that match user's allergen/avoidance list]

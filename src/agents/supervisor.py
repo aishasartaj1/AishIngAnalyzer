@@ -16,7 +16,7 @@ class SupervisorAgent:
     Core Intelligence:
     - Analyzes current workflow state (what's done, what's missing)
     - Routes to next appropriate agent based on state conditions
-    - Manages retry logic (max 2 attempts per agent)
+    - Manages retry logic (max 5 attempts per agent)
     - Tracks attempt counts and escalates if needed
     - Detects workflow completion (all validations passed)
     """
@@ -58,7 +58,7 @@ class SupervisorAgent:
         critic_approved = state.get("critic_approved", False)
         research_attempts = state.get("research_attempts", 0)
         analysis_attempts = state.get("analysis_attempts", 0)
-        max_retries = state.get("max_retries", 2)
+        max_retries = state.get("max_retries", 5)  # Allow up to 5 retry attempts
 
         # Decision 1: Check if max retries exceeded
         if research_attempts >= max_retries and not research_complete:

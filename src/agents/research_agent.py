@@ -80,6 +80,8 @@ class ResearchAgent:
 
         ingredient_data = []
         total_confidence = 0.0
+        qdrant_hits = 0
+        tavily_hits = 0
 
         for ingredient_name in ingredient_names:
             print(f"  📝 Researching: {ingredient_name}")
@@ -87,6 +89,7 @@ class ResearchAgent:
             # Step 1: Try Qdrant lookup first
             data = tools.ingredient_lookup(ingredient_name)
             confidence = data.get("confidence", 0.0)
+            used_tavily = False
 
             print(f"    └─ Qdrant result: {data.get('source')} (confidence: {confidence:.2f})")
 
@@ -99,7 +102,14 @@ class ResearchAgent:
                 if web_data.get("confidence", 0.0) > confidence:
                     data = web_data
                     confidence = data.get("confidence", 0.0)
+                    used_tavily = True
                     print(f"    └─ Using Tavily result (confidence: {confidence:.2f})")
+
+            # Track which tool was used
+            if used_tavily:
+                tavily_hits += 1
+            else:
+                qdrant_hits += 1
 
             # Step 3: Calculate personalized safety score
             score_result = tools.safety_scorer(
@@ -150,6 +160,8 @@ class ResearchAgent:
             "ingredient_data": ingredient_data,
             "research_confidence": avg_confidence,
             "research_attempts": research_attempts + 1,
+            "qdrant_hits": qdrant_hits,
+            "tavily_hits": tavily_hits,
             "messages": [{
                 "role": "assistant",
                 "content": f"Researched {len(ingredient_data)} ingredients with {avg_confidence:.0%} average confidence."

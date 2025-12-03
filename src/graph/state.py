@@ -76,6 +76,15 @@ class AnalysisState(TypedDict):
     workflow_complete: bool
 
     # ==========================================
+    # OBSERVABILITY METRICS
+    # ==========================================
+    analysis_start_time: Optional[str]  # ISO timestamp when analysis started
+    analysis_end_time: Optional[str]  # ISO timestamp when analysis completed
+    qdrant_hits: int  # Number of ingredients found in Qdrant
+    tavily_hits: int  # Number of ingredients requiring Tavily fallback
+    total_critic_rejections: int  # Number of times critic rejected analysis
+
+    # ==========================================
     # METADATA (for memory layer)
     # ==========================================
     created_at: Optional[str]  # ISO timestamp
@@ -109,7 +118,7 @@ def create_initial_state(
     from datetime import datetime
     import uuid
 
-    now = datetime.utcnow().isoformat()
+    now = datetime.now().isoformat()  # Use local time instead of UTC
 
     return {
         # User input
@@ -144,6 +153,13 @@ def create_initial_state(
         # Workflow control
         "next_agent": "research",
         "workflow_complete": False,
+
+        # Observability metrics
+        "analysis_start_time": now,
+        "analysis_end_time": None,
+        "qdrant_hits": 0,
+        "tavily_hits": 0,
+        "total_critic_rejections": 0,
 
         # Metadata
         "created_at": now,

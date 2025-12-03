@@ -1,0 +1,17 @@
+cookie:
+  expiry_days: 30
+  key: aishing_analyzer_auth_key_2025
+  name: aishing_auth_cookie
+credentials:
+  usernames:
+    aishasartaj1:
+      email: aishasartaj1@gmail.com
+      name: Aisha Sartaj
+      password: $2b$12$88RYcCvHSQXF3jkGV8B8I.JXkKTXzoVey82XTyj.tp9tDuE5VmUVC
+    demo:
+      email: demo@aishinganal yzer.com
+      name: Demo User
+      password: $2b$12$KIXqz3UvLQhhYxGfZ0mWRuFj9fHx1nxJ5OjKkQ3L5KzD8dN6xqY4m
+preauthorized:
+  emails:
+  - demo@aishinganalyzer.com

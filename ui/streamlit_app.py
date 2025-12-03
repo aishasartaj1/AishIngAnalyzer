@@ -4,6 +4,9 @@ Complete user interface for cosmetic ingredient safety analysis
 """
 
 import streamlit as st
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
 import sys
 from pathlib import Path
 from PIL import Image
@@ -146,17 +149,27 @@ def main():
     st.markdown("""
     <style>
     .main-header {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 700;
         color: #4F46E5;
         text-align: center;
         margin-bottom: 0.5rem;
     }
     .sub-header {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #6B7280;
         text-align: center;
         margin-bottom: 2rem;
+    }
+    .mvp-badge {
+        display: inline-block;
+        background-color: #10B981;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: 1rem;
     }
     .analyze-button {
         background-color: #4F46E5;
@@ -169,6 +182,48 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
+    # ==========================================
+    # AUTHENTICATION
+    # ==========================================
+
+    # Load authentication config
+    config_path = Path(__file__).parent.parent / "config" / "auth_config.yaml"
+    with open(config_path) as file:
+        config = yaml.load(file, Loader=SafeLoader)
+
+    authenticator = stauth.Authenticate(
+        config['credentials'],
+        config['cookie']['name'],
+        config['cookie']['key'],
+        config['cookie']['expiry_days']
+    )
+
+    # Display login form
+    name, authentication_status, username = authenticator.login('Login', 'main')
+
+    if authentication_status == False:
+        st.error('Username/password is incorrect')
+        st.stop()
+
+    if authentication_status == None:
+        st.warning('Please enter your email and password')
+
+        # Registration option
+        with st.expander("New user? Register here"):
+            try:
+                if authenticator.register_user('Register user', preauthorization=False):
+                    st.success('User registered successfully')
+                    # Save updated config
+                    with open(config_path, 'w') as file:
+                        yaml.dump(config, file, default_flow_style=False)
+            except Exception as e:
+                st.error(e)
+        st.stop()
+
+    # User is authenticated
+    st.sidebar.success(f'Welcome {name}!')
+    authenticator.logout('Logout', 'sidebar')
+
     # Initialize session state
     if 'profile_submitted' not in st.session_state:
         st.session_state.profile_submitted = False
@@ -178,6 +233,8 @@ def main():
         st.session_state.ingredient_text = ""
     if 'session_id' not in st.session_state:
         st.session_state.session_id = None
+    if 'authenticated_email' not in st.session_state:
+        st.session_state.authenticated_email = username
 
     # Initialize SessionManager (with Redis auto-detection)
     if 'session_manager' not in st.session_state:
@@ -190,65 +247,16 @@ def main():
                 st.sidebar.info("📌 Memory: In-memory only (no Redis)")
 
     # ==========================================
-    # SIDEBAR: USER SELECTION / LOGIN
+    # SIDEBAR: USER PROFILE
     # ==========================================
     with st.sidebar:
         st.header("👤 Your Profile")
 
-        # Check if we can load existing users from Redis
+        # Use authenticated email for profile
         sm = st.session_state.session_manager
-        existing_users = []
-        if BACKEND_AVAILABLE and hasattr(sm, 'redis_client') and sm.redis_client and sm.redis_client.is_connected():
-            try:
-                existing_users = sm.redis_client.get_all_users()
-            except:
-                pass
+        user_email = st.session_state.authenticated_email
 
-        # Show user selection if there are existing users
-        show_form = True
-        if existing_users and not st.session_state.profile_submitted:
-            st.info("💡 Select existing profile or create new")
-
-            user_choice = st.radio(
-                "Choose an option:",
-                options=["Load existing profile", "Create new profile"],
-                key="user_choice"
-            )
-
-            if user_choice == "Load existing profile":
-                show_form = False  # Don't show form when loading profile
-
-                selected_user = st.selectbox(
-                    "Select your profile:",
-                    options=existing_users,
-                    key="selected_user"
-                )
-
-                if st.button("Load Profile", use_container_width=True):
-                    # Load profile from Redis
-                    loaded_profile = sm.redis_client.get_user_profile(selected_user)
-                    if loaded_profile:
-                        # Ensure name is in the profile
-                        if 'name' not in loaded_profile:
-                            loaded_profile['name'] = selected_user
-
-                        # Create session
-                        session_id = sm.get_or_create_session(selected_user)
-                        sm.save_user_profile(session_id, loaded_profile)
-
-                        # Update session state
-                        st.session_state.user_profile = loaded_profile
-                        st.session_state.profile_submitted = True
-                        st.session_state.session_id = session_id
-
-                        st.success(f"✅ Loaded profile for {selected_user}!")
-                        st.rerun()
-                    else:
-                        st.error("Could not load profile")
-
-            st.divider()
-
-        if not st.session_state.profile_submitted and show_form:
+        if not st.session_state.profile_submitted:
             with st.form("user_profile_form"):
                 st.subheader("Profile Information")
 
@@ -377,9 +385,9 @@ def main():
                         st.session_state.user_profile = profile
                         st.session_state.profile_submitted = True
 
-                        # Save to SessionManager (short-term + long-term if Redis available)
+                        # Save to SessionManager using authenticated email
                         sm = st.session_state.session_manager
-                        session_id = sm.get_or_create_session(name)
+                        session_id = sm.get_or_create_session(user_email)
                         sm.save_user_profile(session_id, profile)
                         st.session_state.session_id = session_id
 
@@ -387,19 +395,8 @@ def main():
                         st.rerun()
 
         else:
-            # Show collapsed profile
+            # Profile is saved, just show edit button
             st.success("✅ Profile saved!")
-
-            profile = st.session_state.user_profile
-
-            # Get name safely (might be missing from old saved profiles)
-            user_name = profile.get('name', 'User')
-            st.write(f"**{user_name}**")
-            st.write(f"🧬 {profile.get('skin_type', 'normal').title()} skin")
-            st.write(f"📚 {profile.get('expertise_level', 'beginner').title()} level")
-
-            if profile.get('allergies'):
-                st.write(f"⚠️ {len(profile['allergies'])} allergen(s)/ingredients to avoid")
 
             if st.button("✏️ Edit Profile", use_container_width=True):
                 st.session_state.profile_submitted = False
@@ -459,8 +456,8 @@ def main():
     # ==========================================
 
     # Header
-    st.markdown('<h1 class="main-header">Skincare<br>Ingredient Checker</h1>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">Analyze any product for a science-backed breakdown of its ingredients 🔬</p>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">AishIngAnalyzer <span class="mvp-badge">MVP</span></h1>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Cosmetic Ingredient Analyzer 🔬</p>', unsafe_allow_html=True)
 
     st.divider()
 
@@ -612,6 +609,74 @@ def main():
 
                     # Display analysis
                     st.markdown(result["safety_analysis"])
+
+                    st.divider()
+
+                    # ==========================================
+                    # OBSERVABILITY METRICS
+                    # ==========================================
+
+                    with st.expander("📊 Analysis Metrics & Performance", expanded=False):
+                        # Calculate duration
+                        start_time = result.get("analysis_start_time")
+                        end_time = result.get("analysis_end_time")
+
+                        if start_time and end_time:
+                            from datetime import datetime
+                            start_dt = datetime.fromisoformat(start_time)
+                            end_dt = datetime.fromisoformat(end_time)
+                            duration_seconds = (end_dt - start_dt).total_seconds()
+
+                            st.metric(
+                                label="⏱️ Total Analysis Time",
+                                value=f"{duration_seconds:.1f}s"
+                            )
+
+                        # Display metrics in columns
+                        col1, col2, col3 = st.columns(3)
+
+                        with col1:
+                            st.metric(
+                                label="🔄 Research Attempts",
+                                value=result.get("research_attempts", 0)
+                            )
+                            st.metric(
+                                label="📝 Analysis Attempts",
+                                value=result.get("analysis_attempts", 0)
+                            )
+
+                        with col2:
+                            qdrant_hits = result.get("qdrant_hits", 0)
+                            tavily_hits = result.get("tavily_hits", 0)
+                            total_ingredients = qdrant_hits + tavily_hits
+
+                            st.metric(
+                                label="🗄️ Qdrant Database Hits",
+                                value=f"{qdrant_hits}/{total_ingredients}"
+                            )
+                            st.metric(
+                                label="🌐 Tavily Web Search Hits",
+                                value=f"{tavily_hits}/{total_ingredients}"
+                            )
+
+                        with col3:
+                            st.metric(
+                                label="❌ Critic Rejections",
+                                value=result.get("total_critic_rejections", 0)
+                            )
+                            st.metric(
+                                label="📊 Research Confidence",
+                                value=f"{result.get('research_confidence', 0.0):.0%}"
+                            )
+
+                        # Data source breakdown chart
+                        if qdrant_hits > 0 or tavily_hits > 0:
+                            st.write("**Data Source Breakdown:**")
+                            chart_data = {
+                                "Qdrant Database": qdrant_hits,
+                                "Tavily Web Search": tavily_hits
+                            }
+                            st.bar_chart(chart_data)
 
                     st.divider()
 

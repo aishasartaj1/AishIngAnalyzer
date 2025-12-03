@@ -65,6 +65,7 @@ class CriticAgent:
         ingredient_data = state.get("ingredient_data", [])
         allergies = state.get("allergies", [])
         expertise_level = state.get("expertise_level", "beginner")
+        total_critic_rejections = state.get("total_critic_rejections", 0)
 
         if not safety_analysis:
             print("❌ Critic Agent: No analysis to validate")
@@ -110,6 +111,7 @@ class CriticAgent:
                     "critic_approved": False,
                     "critic_feedback": validation_result,
                     "analysis_complete": False,  # Force re-analysis
+                    "total_critic_rejections": total_critic_rejections + 1,
                     "messages": [{
                         "role": "assistant",
                         "content": "Analysis rejected by critic. Generating improved version..."
@@ -158,21 +160,28 @@ VALIDATION GATES (all must pass):
 
 1. ✓ COMPLETENESS CHECK
    - Are ALL {len(ingredient_names)} ingredients addressed in the analysis?
-   - Is there a clear verdict for each ingredient (SAFE/USE WITH CAUTION/AVOID)?
+   - Does EVERY ingredient have: Name, Purpose, Safety Rating, Concerns, Recommendation?
    - Missing ingredients: [list any]
 
-2. ✓ ALLERGEN MATCH CHECK
-   - User allergies: {allergen_list}
-   - Are ALL allergens properly flagged with ⚠️ ALLERGEN MATCH?
-   - Are allergen-matched ingredients marked as AVOID?
+2. ✓ FORMAT CHECK
+   - Is the ingredient analysis presented as a markdown TABLE?
+   - Does the table have these columns: Ingredient | Purpose | Safety Rating | Concerns | Recommendation
+   - Does EVERY ingredient have a row in the table with ALL columns filled?
+   - Ingredients missing Purpose field: [list any]
+   - Format violations: [list any]
+
+3. ✓ ALLERGEN MATCH CHECK
+   - User allergens/avoidance list: {allergen_list}
+   - Are ALL items properly flagged with ⚠️ ALLERGEN/INGREDIENT TO AVOID?
+   - Are matched items marked as AVOID?
    - Missing allergen flags: [list any]
 
-3. ✓ CONSISTENCY CHECK
+4. ✓ CONSISTENCY CHECK
    - Do safety scores (1-10) match the concern descriptions?
    - Example: Score 7-10 should have serious concerns, score 1-3 should be safe
    - Inconsistencies: [list any]
 
-4. ✓ TONE APPROPRIATENESS CHECK
+5. ✓ TONE APPROPRIATENESS CHECK
    - Expertise level: {expertise_level}
    - Beginner: Simple language, no jargon?
    - Intermediate: Moderate technical detail?

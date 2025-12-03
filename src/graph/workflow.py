@@ -19,7 +19,7 @@ def create_workflow() -> StateGraph:
     START → Supervisor → Research → Supervisor → Analysis → Supervisor → Critic → Supervisor → END
 
     The Supervisor routes between agents based on state conditions.
-    Supports retry logic with max 2 attempts per agent.
+    Supports retry logic with max 5 attempts per agent.
 
     This workflow manages SHORT-TERM MEMORY (state) during execution.
     """
@@ -119,6 +119,10 @@ def run_analysis(
 
     # Execute workflow
     final_state = app.invoke(initial_state)
+
+    # Set end time for observability
+    from datetime import datetime
+    final_state["analysis_end_time"] = datetime.now().isoformat()
 
     # Display completion status
     print("\n" + "="*60)
