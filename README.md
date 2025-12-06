@@ -576,16 +576,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Live Demo:** [https://aishinganalyzer.streamlit.app](https://aishinganalyzer.streamlit.app)  
 **Documentation:** [Full Capstone Document](./docs/AishIngAnalyzer_Capstone_Complete.docx)
 
----
-
-## ⭐ Star History
-
-If this project helped you, please consider giving it a star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/AishIngAnalyzer&type=Date)](https://star-history.com/#yourusername/AishIngAnalyzer&Date)
-
----
-
 **Built with ❤️ for the AI Agents Intensive Capstone Project**
 
 *Transforming 20 minutes of confusion into 10 seconds of clarity.*
