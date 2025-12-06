@@ -37,8 +37,8 @@ From 20 minutes of manual research to 10 seconds of validated, personalized anal
 
 ### Demo
 
-🎥 **[Watch Demo Video](chatgpt.com/?model=text-davinci-002-render-sha)**  
-🌐 **[Try Live Application](https://aishinganalyzer.streamlit.app)**  
+🎥 **[Watch Demo Video](https://www.youtube.com/watch?v=CiJE4b3sGzU&t=197s)**  
+🌐 **[Try Live Application - under production](https://aishinganalyzer.streamlit.app)**  
 📊 **[View LangSmith Traces]([https://smith.langchain.com/your-project](https://smith.langchain.com/o/1f0072d7-9e78-577a-8030-3cfc7e84f912?paginationModel=%7B%22pageIndex%22%3A0%2C%22pageSize%22%3A5%7D))**
 
 ### Quick Stats
