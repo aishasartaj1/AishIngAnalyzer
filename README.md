@@ -5,7 +5,7 @@
 [![Gemini 2.0](https://img.shields.io/badge/Gemini-2.0%20Flash-orange.svg)](https://ai.google.dev/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-green.svg)](https://github.com/langchain-ai/langgraph)
 
-> **A self-correcting multi-agent AI system that analyzes cosmetic ingredients in under 10 seconds, delivering personalized safety assessments based on user allergies and skin type.**
+> **A multi-agent AI system that analyzes cosmetic ingredients in under 10 seconds, delivering personalized safety assessments based on user allergies and skin type.**
 
 From 20 minutes of manual research to 10 seconds of validated, personalized analysis.
 
@@ -35,6 +35,10 @@ From 20 minutes of manual research to 10 seconds of validated, personalized anal
 
 **AishIngAnalyzer** is a production-ready multi-agent AI system built for the AI Agents Intensive Capstone Project. It demonstrates true agentic behavior through autonomous decision-making, self-correction, and dynamic workflow orchestration.
 
+### Update 
+- Submitted the project to Google × Kaggle AI Agents Capstone [Link] (https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/aishinganalyzer-cosmetic-ingredient-analyzer)
+- Won a Top-12 spot out of 11,000 submissionsin the Google × Kaggle AI Agents Capstone [Link to 12 winning projects] (https://www.kaggle.com/competitions/agents-intensive-capstone-project/discussion/663531)
+  
 ### Demo
 
 🎥 **[Watch Demo Video](https://www.youtube.com/watch?v=CiJE4b3sGzU&t=197s)**  
