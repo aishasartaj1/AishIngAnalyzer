@@ -36,8 +36,8 @@ From 20 minutes of manual research to 10 seconds of validated, personalized anal
 **AishIngAnalyzer** is a production-ready multi-agent AI system built for the AI Agents Intensive Capstone Project. It demonstrates true agentic behavior through autonomous decision-making, self-correction, and dynamic workflow orchestration.
 
 ### Update 
-- Submitted the project to Google × Kaggle AI Agents Capstone [Link] (https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/aishinganalyzer-cosmetic-ingredient-analyzer)
-- Won a Top-12 spot out of 11,000 submissionsin the Google × Kaggle AI Agents Capstone [Link to 12 winning projects] (https://www.kaggle.com/competitions/agents-intensive-capstone-project/discussion/663531)
+- Submitted the project to Google × Kaggle AI Agents Capstone [Link](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/aishinganalyzer-cosmetic-ingredient-analyzer)
+- Won a Top-12 spot out of 11,000 submissionsin the Google × Kaggle AI Agents Capstone [Link to 12 winning projects](https://www.kaggle.com/competitions/agents-intensive-capstone-project/discussion/663531)
   
 ### Demo
 
