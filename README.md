@@ -572,8 +572,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - [EWG Skin Deep](https://www.ewg.org/skindeep/) - Safety scores and ratings
 
 ---
-
-**Live Demo:** [https://aishinganalyzer.streamlit.app](https://aishinganalyzer.streamlit.app)  
+ 
 **Documentation:** [Full Capstone Document](./docs/AishIngAnalyzer_Capstone_Complete.docx)
 
 **Built with ❤️ for the AI Agents Intensive Capstone Project**
